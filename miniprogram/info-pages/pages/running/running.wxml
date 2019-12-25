@@ -1,0 +1,18 @@
+<!--miniprogram/pages/index6/index.wxml-->
+<import src="./answer_bg.wxml" />
+<import src="./answer_fig.wxml" />
+<view class="container">
+<view class="number_line">
+  <view class="number">第{{questionNumber}}题</view>
+</view>
+<view class="question_frame">
+  <view class="question_flex">
+    <view class="question_content">{{questionContent}}</view>
+    <view catchtap='change' wx:if="{{click}}" style="color:green">A {{choiceA}}</view>
+    <view wx:else class="question_answer">A {{choiceA}}</view>
+    <view class="question_answer">B {{choiceB}}</view>
+  </view>
+</view>
+<template is="answer_bg" />
+<template is="answer_fig"/>
+</view>

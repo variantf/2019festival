@@ -1,0 +1,23 @@
+<!--info-pages/pages/rule/rule.wxml-->
+<import src="./bg.wxml" />
+<import src="./next.wxml" />
+<import src="../../../pages/templates/templates.wxml" />
+<view class="container">
+  <template is="bg-img" />
+  <template is="tvstation" />
+  <template is="next-before" />
+  <view class="rule-container">
+    <view class="rule-item">
+      <view>1、</view>
+      <view>参与趣味知识问答，答对三题即可获取抽奖机会。</view>
+    </view>
+    <view class="rule-item">
+      <view>2、</view>
+      <view>每人每天都有三次答题机会。机会用完，可通过分享获取额外答题机会。</view>
+    </view>
+    <view class="rule-item">
+      <view>3、</view>
+      <view>参与签到抽奖活动，连续签到21天即可瓜分千万红包哦。</view>
+    </view>
+  </view>
+</view>

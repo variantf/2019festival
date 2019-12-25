@@ -1,0 +1,53 @@
+/**index.wxss**/
+
+.start-btn {
+  position: absolute;
+  bottom: 250rpx;
+  width: 260rpx;
+  height: 100rpx;
+  background-color: #00000000
+}
+
+.signon-btn {
+  position: absolute;
+  right: 50rpx;
+  top: 100rpx;
+  width: 110rpx;
+  height: 150rpx;
+}
+
+.signon-dialog {
+  position: absolute;
+  z-index: 2;
+  width: 685rpx;
+  height: 960rpx;
+  margin: auto;
+}
+
+.dialog-back {
+  color: #fdfd59;
+  font-family: 'default';
+  font-size: 50rpx;
+  top: 71rpx;
+  left: 118rpx;
+  position: absolute;
+}
+
+.dialog-num {
+  position: absolute;
+  top: 340rpx;
+  left: 200rpx;
+  font-family: 'default';
+  font-size: 100rpx;
+  color: #fdeb72;
+}
+
+.inner-full {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: auto;
+  height: auto;
+}

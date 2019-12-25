@@ -1,0 +1,11 @@
+<!--miniprogram/pages/index6/index.wxml-->
+<import src="./success_bg.wxml" />
+<import src="./success_button.wxml" />
+<view class="container">
+<template is="success_bg" />
+<view class="cong_flame">
+  <view class="cong">恭喜你答对{{correctNum}}题</view>
+  <view class="cong">获取抽奖机会</view>
+</view>
+<template is="success_button"/>
+</view>

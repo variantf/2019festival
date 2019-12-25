@@ -1,0 +1,11 @@
+<!--index.wxml-->
+<import src="../templates/templates.wxml" />
+<import src="./bg.wxml" />
+<import src="./start-btn.wxml" />
+<import src="./signon.wxml" />
+<view class="container">
+<template is="index-bg" />
+<template is="tvstation" />
+<template is="start-btn" />
+<template is="signon-btn" data="{{showSignonDialog, successiveSignonCount}}"/>
+</view>

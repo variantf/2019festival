@@ -1,0 +1,12 @@
+<import src="./rotation.wxml" />
+<import src="./overlay.wxml" />
+<import src="./numbers.wxml" />
+<import src="../../../pages/templates/templates.wxml" />
+<view class="container">
+  <template is="rotation" />
+  <template is="overlay" />
+  <template is="tvstation" />
+  <template wx:if="{{remainSeconds == 3}}" is="three" />
+  <template wx:elif="{{remainSeconds == 2}}" is="two" />
+  <template wx:else is="one" />
+</view>
