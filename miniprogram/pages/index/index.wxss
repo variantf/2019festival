@@ -1,22 +1,45 @@
 /**index.wxss**/
+@-webkit-keyframes swing {
+  0% {
+    transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -moz-transform: rotate(-30deg); /* Firefox */
+    -webkit-transform: rotate(-30deg); /* Safari 和 Chrome */
+    -o-transform: rotate(-30deg);
+  }
+  50% {
+    transform: rotate(30deg);
+    -ms-transform: rotate(30deg); /* IE 9 */
+    -moz-transform: rotate(30deg); /* Firefox */
+    -webkit-transform: rotate(30deg); /* Safari 和 Chrome */
+    -o-transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+    -ms-transform: rotate(-30deg); /* IE 9 */
+    -moz-transform: rotate(-30deg); /* Firefox */
+    -webkit-transform: rotate(-30deg); /* Safari 和 Chrome */
+    -o-transform: rotate(-30deg);
+  }
+}
 
 .start-btn {
   position: absolute;
-  bottom: 5%;
+  bottom: 13%;
   width:45%;
   height:12%;
-  /* bottom: 250rpx; */
-  /* width: 260rpx; */
-  /* height: 100rpx; */
-  background-color: #00000000
+  background-color: #00000000;
 }
 
 .signon-btn {
   position: absolute;
   right: 50rpx;
   top: 100rpx;
-  width: 110rpx;
-  height: 150rpx;
+  background-color: #00000000;
+  animation-name: swing;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  transform-origin: top;
 }
 
 .signon-dialog {

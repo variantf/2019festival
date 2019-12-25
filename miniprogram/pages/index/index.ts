@@ -2,18 +2,15 @@
 // 获取应用实例
 const app = getApp<IAppOption>()
 
+const API_ENDPOINT = 'https://endpoint.2019festival.variantf.zgcszkw.com/api';
+
 Page({
   data: {
     showSignonDialog: false,
     successiveSignonCount: '1',
   },
-  signon() {
-    this.setData({
-      showSignonDialog: true
-    })
-  },
   closeSignonDialog() {
-    this.setData({showSignonDialog: false})
+    this.setData({ showSignonDialog: false })
   },
   start(info: any) {
     this.ensureLogin(info.detail.userInfo, ()=>{
@@ -21,6 +18,18 @@ Page({
         url: "../../info-pages/pages/rule/rule"
       })
     });
+  },
+  signon(info: any) {
+    this.ensureLogin(info.detail.userInfo, ()=>{
+      wx.request({
+        method: "POST",
+        url: API_ENDPOINT + "/signon",
+        success: app.handleRequstFinish(() => {
+          this.setData({ showSignonDialog: true })
+        }),
+        fail: app.handleRequestFail
+      })
+    })
   },
   ensureLogin(userInfo: Object, callback?: () => void) {
     if (!userInfo) {
@@ -30,26 +39,25 @@ Page({
       });
       return;
     }
-    const page = this;
     wx.login({
       success(res: { code: string }) {
         // console.log(_res.code)
         if (res.code) {
           wx.request({
             method: "POST",
-            url: "https://endpoint.go-ahead.variantf.zgcszkw.com/api/login",
+            url: API_ENDPOINT + "/login",
             data: {
               ...userInfo,
               code: res.code
             },
-            success(res) {
+            success: app.handleRequstFinish(res => {
               const obj = res.data as { token: string };
-              page.token = obj.token;
+              app.globalData.token = obj.token;
               if (callback) {
                 callback();
               }
-            },
-            fail: page.handleRequestFail
+            }),
+            fail: app.handleRequestFail
           })
         } else {
           wx.showModal({
