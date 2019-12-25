@@ -1,10 +1,13 @@
 /* info-pages/pages/rule/rule.wxss */
 
 .next-btn {
-  width: 235rpx;
-  height: 94rpx;
+  /* width: 235rpx; */
+  /* height: 94rpx; */
   position: absolute;
-  bottom: 150rpx;
+  bottom: 5%;
+  width:45%;
+  height: 12%;
+  /* bottom: 150rpx; */
   margin: auto;
 }
 

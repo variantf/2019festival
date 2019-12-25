@@ -18,21 +18,21 @@ Page({
   /**
    * Lifecycle function--Called when page is initially rendered
    */
-  onReady: function () {
-    const self = this;
-    this.timer = setInterval(() => {
-      console.log(self.data.remainSeconds);
-      if (self.data.remainSeconds == 0) {
-        wx.redirectTo({
-          url: '../running/running',
-        })
-      } else {
-        self.setData({
-          remainSeconds: self.data.remainSeconds - 1
-        });
-      }
-    }, 1000);
-  },
+  // onReady: function () {
+  //   const self = this;
+  //   this.timer = setInterval(() => {
+  //     console.log(self.data.remainSeconds);
+  //     if (self.data.remainSeconds == 0) {
+  //       wx.redirectTo({
+  //         url: '../running/running',
+  //       })
+  //     } else {
+  //       self.setData({
+  //         remainSeconds: self.data.remainSeconds - 1
+  //       });
+  //     }
+  //   }, 1000);
+  // },
 
   /**
    * Lifecycle function--Called when page show

@@ -22,6 +22,8 @@
   right: -50%;
   bottom: -50%;
   top: -50%;
+  align-items:center; 
+  justify-content: center; 
   width: auto;
   height: auto;
   animation-name: spin;
@@ -41,10 +43,15 @@
 }
 
 .number {
-  position: absolute;
-  margin: auto;
+  /* display:flex; */
+  /* flex-direction: row; */
+  /* position: absolute; */
+  margin-top: 30%;
+  /* margin: auto; */
   z-index: 5;
   height: 256rpx;
   width: 160rpx;
-  top: 31%;
+  /* top: 31%; */
+  align-items:center; 
+  justify-content: center; 
 }

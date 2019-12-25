@@ -15,6 +15,69 @@
 	"setting": {},
 	"simulatorType": "wechat",
 	"simulatorPluginLibVersion": {},
-	"appid": "wxed978fb2e0941978",
-	"condition": {}
+	"appid": "wx65304c4821043067",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 5,
+			"list": [
+				{
+					"id": -1,
+					"name": "info-pages/pages/rule/rule",
+					"pathName": "info-pages/pages/rule/rule",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "info-pages/pages/countdown/countdown",
+					"pathName": "info-pages/pages/countdown/countdown",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 2,
+					"name": "info-pages/pages/index7/index",
+					"pathName": "info-pages/pages/index7/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "info-pages/pages/index6/index",
+					"pathName": "info-pages/pages/index6/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "info-pages/pages/index5/index",
+					"pathName": "info-pages/pages/index5/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/index/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				}
+			]
+		}
+	}
 }

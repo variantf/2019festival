@@ -2,9 +2,12 @@
 
 .start-btn {
   position: absolute;
-  bottom: 250rpx;
-  width: 260rpx;
-  height: 100rpx;
+  bottom: 5%;
+  width:45%;
+  height:12%;
+  /* bottom: 250rpx; */
+  /* width: 260rpx; */
+  /* height: 100rpx; */
   background-color: #00000000
 }
 
