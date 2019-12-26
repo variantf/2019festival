@@ -34,7 +34,7 @@
 .signon-btn {
   position: absolute;
   right: 50rpx;
-  top: 100rpx;
+  top: 150rpx;
   background-color: #00000000;
   animation-name: swing;
   animation-duration: 3s;

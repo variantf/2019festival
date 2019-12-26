@@ -13,7 +13,7 @@ Page({
   start(info: any) {
     this.ensureLogin(info.detail.userInfo, ()=>{
       wx.redirectTo({
-        url: "../../info-pages/pages/rule/rule"
+        url: "../../prepare-pages/pages/rule/rule"
       })
     });
   },

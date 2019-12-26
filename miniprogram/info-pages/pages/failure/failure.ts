@@ -4,7 +4,7 @@
 Page({
   toRule() {
     wx.redirectTo({
-      url: "../rule/rule"
+      url: "/prepare-pages/pages/rule/rule"
     })
   }
 })

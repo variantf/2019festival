@@ -24,7 +24,7 @@ Page({
       console.log(self.data.remainSeconds);
       if (self.data.remainSeconds == 0) {
         wx.redirectTo({
-          url: '../running/running',
+          url: '/info-pages/pages/running/running',
         })
       } else {
         self.setData({

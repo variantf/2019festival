@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<import src="./failure.wxml" />
+<import src="./failure_bg.wxml" />
 <import src="./failure_button.wxml" />
 <view class="container">
 <template is="failure_bg" />

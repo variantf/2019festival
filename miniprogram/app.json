@@ -12,13 +12,22 @@
     {
       "root": "info-pages",
       "pages": [
-        "pages/rule/rule",
-        "pages/countdown/countdown",
         "pages/failure/failure",
         "pages/success/success",
-        "pages/lottery/lottery"
+        "pages/lottery/lottery",
+        "pages/running/running"
+      ]
+    },
+    {
+      "root": "prepare-pages",
+      "pages": [
+        "pages/rule/rule",
+        "pages/countdown/countdown"
       ]
     }
+  ],
+  "navigateToMiniProgramAppIdList": [
+    "wx2ae8c932b8db6010"
   ],
   "style": "v2",
   "sitemapLocation": "sitemap.json"
