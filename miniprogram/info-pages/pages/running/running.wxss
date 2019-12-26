@@ -21,6 +21,7 @@
   z-index: 2;
   color:red;
   font-size: 50rpx;
+  font-family: 'default';
 }
 .number_line{
   position: fixed;
@@ -34,7 +35,7 @@
   bottom:25%;
   left: 20%;
   right:20%;
-  /* background-color: red; */
+  font-family: 'default';
 }
 .question_flex{
   position: absolute;

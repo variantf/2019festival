@@ -2,12 +2,10 @@
 // 获取应用实例
 const app = getApp<IAppOption>()
 
-const API_ENDPOINT = 'https://endpoint.2019festival.variantf.zgcszkw.com/api';
-
 Page({
   data: {
     showSignonDialog: false,
-    successiveSignonCount: '1',
+    successiveSignonCount: 0,
   },
   closeSignonDialog() {
     this.setData({ showSignonDialog: false })
@@ -23,9 +21,15 @@ Page({
     this.ensureLogin(info.detail.userInfo, ()=>{
       wx.request({
         method: "POST",
-        url: API_ENDPOINT + "/signon",
-        success: app.handleRequstFinish(() => {
-          this.setData({ showSignonDialog: true })
+        url: app.API_ENDPOINT + "/signon",
+        header: {
+          'X-User-Token': app.globalData.token
+        },
+        success: app.handleRequstFinish((res: any) => {
+          this.setData({ 
+            showSignonDialog: true, 
+            successiveSignonCount: res.data.successiveSignonCount 
+          })
         }),
         fail: app.handleRequestFail
       })
@@ -45,7 +49,7 @@ Page({
         if (res.code) {
           wx.request({
             method: "POST",
-            url: API_ENDPOINT + "/login",
+            url: app.API_ENDPOINT + "/login",
             data: {
               ...userInfo,
               code: res.code

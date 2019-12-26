@@ -1,6 +1,7 @@
 // app.ts
 
 App<IAppOption>({
+  API_ENDPOINT: 'https://endpoint.2019festival.variantf.zgcszkw.com/api',
   globalData: {
     token: ''
   },
