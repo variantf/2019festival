@@ -4,9 +4,18 @@ App<IAppOption>({
   API_ENDPOINT: 'https://endpoint.2019festival.variantf.zgcszkw.com/api',
   globalData: {
     token: ''
+
   },
   onLaunch() {
+    console.log(12334)
+    this.innerAudioContext = wx.createInnerAudioContext();
+    this.innerAudioContext.autoplay=true; 
+    this.innerAudioContext.src ='https://endpoint.2019festival.variantf.zgcszkw.com/static/bgm.mp3';
+    this.innerAudioContext.loop = true;
+    this.innerAudioContext.play();
   },
+  
+
   handleRequstFinish(callback: (res: WechatMiniprogram.RequestSuccessCallbackResult) => void) {
     return (res: WechatMiniprogram.RequestSuccessCallbackResult) => {
       if (res.statusCode != 200) {

@@ -7,5 +7,6 @@
 <template is="index-bg" />
 <template is="tvstation" />
 <template is="start-btn" />
+<template is="trumpet" data="{{bgmPlaying}}"/>
 <template is="signon-btn" data="{{showSignonDialog, successiveSignonCount}}"/>
 </view>
