@@ -17,10 +17,13 @@
   bottom:0%
 }
 .number{
-  position: relative;
+  position: absolute;
+  top:13%;
+  
+  align-items:center; 
   z-index: 2;
-  color:red;
-  font-size: 50rpx;
+  color:#eb3223;
+  font-size: 80rpx;
   font-family: 'default';
 }
 .number_line{
@@ -31,7 +34,7 @@
 .question_frame{
   position: fixed;
   z-index: 2;
-  top:25%;
+  top:30%;
   bottom:25%;
   left: 20%;
   right:20%;

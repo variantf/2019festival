@@ -2,9 +2,9 @@
 <import src="./answer_bg.wxml" />
 <import src="./answer_fig.wxml" />
 <view class="container">
-<view class="number_line">
-  <view class="number">第{{questionNumber}}题</view>
-</view>
+<!-- <view class="number_line"> -->
+  <view class="number">第  {{questionNumber}}  题</view>
+<!-- </view> -->
 <view class="question_frame">
   <view class="question_flex">
     <view class="question_content">{{questionContent}}</view>

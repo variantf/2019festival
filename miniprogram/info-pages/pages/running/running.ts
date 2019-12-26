@@ -5,7 +5,7 @@ Page({
     sid: '',
     pid: '',
     questionNumber:0,
-    questionContent:"",
+    questionContent:"截止到2018年末，我国农村贫困人口减少到1660万人。2019年12月19日，全国扶贫开发工作会议总结2019年脱贫攻坚工作，预计2019年减少贫困人口1000万人以上。",
     choiceA:"",
     choiceB:"",
     lastChoice: '',
