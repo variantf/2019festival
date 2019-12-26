@@ -14,9 +14,9 @@
       "pages": [
         "pages/rule/rule",
         "pages/countdown/countdown",
-        "pages/index7/index",
-        "pages/index6/index",
-        "pages/index5/index"
+        "pages/failure/failure",
+        "pages/success/success",
+        "pages/lottery/lottery"
       ]
     }
   ],

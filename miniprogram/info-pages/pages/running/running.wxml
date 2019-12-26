@@ -8,9 +8,8 @@
 <view class="question_frame">
   <view class="question_flex">
     <view class="question_content">{{questionContent}}</view>
-    <view catchtap='change' wx:if="{{click}}" style="color:green">A {{choiceA}}</view>
-    <view wx:else class="question_answer">A {{choiceA}}</view>
-    <view class="question_answer">B {{choiceB}}</view>
+    <view id="A" style="{{lastChoice=='A' && ((lastChoiceStatus=='error' && 'color: red;') || (lastChoiceStatus=='correct' && 'color: green;'))}}" bindtap="nextQuestion" class="question_answer">A. {{choiceA}}</view>
+    <view id="B" style="{{lastChoice=='B' && ((lastChoiceStatus=='error' && 'color: red;') || (lastChoiceStatus=='correct' && 'color: green;'))}}" bindtap="nextQuestion" class="question_answer">B. {{choiceB}}</view>
   </view>
 </view>
 <template is="answer_bg" />

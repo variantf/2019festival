@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<import src="./failure.wxml" />
+<import src="./failure_button.wxml" />
+<view class="container">
+<template is="failure_bg" />
+<template is="failure_button"/>
+</view>

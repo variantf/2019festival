@@ -1,3 +1,5 @@
+var app = getApp<IAppOption>()
+
 Page({
   data: {
     sid: '',
@@ -40,7 +42,7 @@ Page({
                       });
                     } else {
                       wx.redirectTo({
-                        url: '../failed/failed'
+                        url: '../failure/failure'
                       });
                     }
                 }, 500);
