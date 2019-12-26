@@ -5,6 +5,7 @@ interface IAppOption {
   globalData: {
     token: string
   },
+  innerAudioContext: WechatMiniprogram.InnerAudioContext | null,
   handleRequstFinish: (callback: (res: WechatMiniprogram.RequestSuccessCallbackResult) => void) => WechatMiniprogram.RequestSuccessCallback,
   handleRequestFail: (res: WechatMiniprogram.GeneralCallbackResult) => void
 }

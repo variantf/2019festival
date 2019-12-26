@@ -7,15 +7,13 @@ App<IAppOption>({
 
   },
   onLaunch() {
-    console.log(12334)
     this.innerAudioContext = wx.createInnerAudioContext();
     this.innerAudioContext.autoplay=true; 
     this.innerAudioContext.src ='https://endpoint.2019festival.variantf.zgcszkw.com/static/bgm.mp3';
     this.innerAudioContext.loop = true;
     this.innerAudioContext.play();
   },
-  
-
+  innerAudioContext: null,
   handleRequstFinish(callback: (res: WechatMiniprogram.RequestSuccessCallbackResult) => void) {
     return (res: WechatMiniprogram.RequestSuccessCallbackResult) => {
       if (res.statusCode != 200) {
@@ -33,10 +31,9 @@ App<IAppOption>({
       showCancel: false,
       complete: () => {
         wx.redirectTo({
-          url: "index"
+          url: "/pages/index/index"
         });
       }
     });
-    
   },
 })

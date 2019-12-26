@@ -72,4 +72,20 @@ Page({
       }
     })
   },
+  onShareAppMessage: function () {
+    if (app.globalData.token) {
+      wx.request({
+        url: app.API_ENDPOINT + "/shared",
+        method: "POST",
+        header: {
+          'X-User-Token': app.globalData.token
+        }
+      })
+    }
+
+    return {
+      title: '快来跟我一起玩河北经视新春欢享节！！',
+      imageUrl: 'https://endpoint.2019festival.variantf.zgcszkw.com/static/share.jpg'
+    }
+  },
 })
