@@ -3,7 +3,8 @@
 
 Page({
   data: {
-    correctNum: 0
+    correctNum: 0,
+    btnStyle: 'btn-bg-blue'
   },
   toLottery() {
     wx.redirectTo({
@@ -15,5 +16,15 @@ Page({
     this.setData({
       correctNum: options.correct_count
     });
-  }
+  },
+  btnToRed() {
+    this.setData({
+      btnStyle: 'btn-bg-red'
+    })
+  },
+  btnToBlue() {
+    this.setData({
+      btnStyle: 'btn-bg-blue'
+    })
+  },
 })

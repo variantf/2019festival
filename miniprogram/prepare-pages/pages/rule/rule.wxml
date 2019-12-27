@@ -1,6 +1,5 @@
 <!--info-pages/pages/rule/rule.wxml-->
 <import src="./bg.wxml" />
-<import src="./next.wxml" />
 <import src="../../../pages/templates/templates.wxml" />
 <view class="container">
   <template is="bg-img" />
@@ -20,4 +19,5 @@
       <view>参与签到抽奖活动，连续签到21天即可瓜分千万红包哦。</view>
     </view>
   </view>
+  <view bindtap="next" bindtouchstart="btnToRed" bindtouchend="btnToBlue" class="next-btn btn {{btnStyle}}">我知道了</view>
 </view>

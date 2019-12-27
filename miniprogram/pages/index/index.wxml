@@ -1,12 +1,12 @@
 <!--index.wxml-->
 <import src="../templates/templates.wxml" />
 <import src="./bg.wxml" />
-<import src="./start-btn.wxml" />
 <import src="./signon.wxml" />
 <view class="container">
-<template is="index-bg" />
-<template is="tvstation" />
-<template is="start-btn" />
-<template is="trumpet" data="{{bgmPlaying}}"/>
-<template is="signon-btn" data="{{showSignonDialog, successiveSignonCount}}"/>
+  <template is="index-bg" />
+  <template is="tvstation" />
+  <button open-type="getUserInfo" bindgetuserinfo="start" bindtouchstart="startBtnToRed" bindtouchend="startBtnToBlue" class="start-btn btn {{startBtnStyle}}" style="">点击参与</button>
+  <template is="trumpet" data="{{bgmPlaying}}"/>
+  <template is="signon-btn" data="{{showSignonDialog, successiveSignonCount, signonDialogBgStyle, signonBtnStyle}}"/>
+  <view class="sigon-text">去签到</view>
 </view>

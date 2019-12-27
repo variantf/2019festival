@@ -6,9 +6,15 @@ Page({
   data: {
     showSignonDialog: false,
     successiveSignonCount: 0,
+    startBtnStyle: 'btn-bg-blue',
+    signonDialogBgStyle: '',
+    signonBtnStyle: 'btn-bg-blue'
   },
   closeSignonDialog() {
-    this.setData({ showSignonDialog: false })
+    this.setData({ 
+      showSignonDialog: false, 
+      signonDialogBgStyle: ''
+    })
   },
   start(info: any) {
     this.ensureLogin(info.detail.userInfo, ()=>{
@@ -17,21 +23,29 @@ Page({
       })
     });
   },
-  signon(info: any) {
+  signon() {
+    wx.request({
+      method: "POST",
+      url: app.API_ENDPOINT + "/signon",
+      header: {
+        'X-User-Token': app.globalData.token
+      },
+      success: app.handleRequstFinish((res: any) => {
+        this.setData({
+          showSignonDialog: true,
+          signonDialogBgStyle: 'signon-dialog-bg-2',
+          successiveSignonCount: res.data.successiveSignonCount
+        })
+      }),
+      fail: app.handleRequestFail
+    })
+  },
+  showSignon(info: any) {
+    console.log("showSignon")
     this.ensureLogin(info.detail.userInfo, ()=>{
-      wx.request({
-        method: "POST",
-        url: app.API_ENDPOINT + "/signon",
-        header: {
-          'X-User-Token': app.globalData.token
-        },
-        success: app.handleRequstFinish((res: any) => {
-          this.setData({ 
-            showSignonDialog: true, 
-            successiveSignonCount: res.data.successiveSignonCount 
-          })
-        }),
-        fail: app.handleRequestFail
+      this.setData({
+        showSignonDialog: true,
+        signonDialogBgStyle: 'signon-dialog-bg-1'
       })
     })
   },
@@ -88,4 +102,25 @@ Page({
       imageUrl: 'https://endpoint.2019festival.variantf.zgcszkw.com/static/share.jpg'
     }
   },
+
+  startBtnToRed() {
+    this.setData({
+      startBtnStyle: 'btn-bg-red'
+    })
+  },
+  startBtnToBlue() {
+    this.setData({
+      startBtnStyle: 'btn-bg-blue'
+    })
+  },
+  signonBtnToRed() {
+    this.setData({
+      signonBtnStyle: 'btn-bg-red'
+    })
+  },
+  signonBtnToBlue() {
+    this.setData({
+      signonBtnStyle: 'btn-bg-blue'
+    })
+  }
 })

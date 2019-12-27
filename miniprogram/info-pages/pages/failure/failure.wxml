@@ -3,5 +3,5 @@
 <import src="./failure_button.wxml" />
 <view class="container">
 <template is="failure_bg" />
-<template is="failure_button"/>
+<view bindtap="back" bindtouchstart="btnToRed" bindtouchend="btnToBlue" class="failure-button btn {{btnStyle}}">再试一次</view>
 </view>
