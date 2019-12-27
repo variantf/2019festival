@@ -1,7 +1,11 @@
 <!--miniprogram/pages/index6/index.wxml-->
 <import src="./present_bg.wxml" />
 <import src="./present_button.wxml" />
+<import src="./stars.wxml" />
 <view class="container">
 <template is="present_bg" />
-<template is="present_button"/>
+<template is="stars" />
+<!-- <template is="present_button"/> -->
+
+<view bindtap="toLottery" bindtouchstart="btnToRed" bindtouchend="btnToBlue" class="present_button btn {{btnStyle}}">收下啦</view>
 </view>

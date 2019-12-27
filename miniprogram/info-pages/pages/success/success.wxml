@@ -7,5 +7,5 @@
   <view class="cong">恭喜你答对{{correctNum}}题</view>
   <view class="cong">获取抽奖机会</view>
 </view>
-<view bindtap="toLottery" bindtouchstart="btnToRed" bindtouchend="btnToBlue" class="success_bg btn {{btnStyle}}">再试一次</view>
+<view bindtap="toLottery" bindtouchstart="btnToRed" bindtouchend="btnToBlue" class="success_button btn {{btnStyle}}">再试一次</view>
 </view>

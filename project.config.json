@@ -33,12 +33,12 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 2,
 			"list": [
 				{
-					"id": -1,
-					"name": "info-pages/pages/rule/rule",
-					"pathName": "info-pages/pages/rule/rule",
+					"id": 0,
+					"name": "prepare-pages/pages/rule/rule",
+					"pathName": "prepare-pages/pages/rule/rule",
 					"query": "",
 					"scene": null
 				},
@@ -51,15 +51,15 @@
 				},
 				{
 					"id": 2,
-					"name": "info-pages/pages/index7/index",
-					"pathName": "info-pages/pages/index7/index",
+					"name": "info-pages/pages/lottery/lottery",
+					"pathName": "info-pages/pages/lottery/lottery",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "info-pages/pages/index6/index",
-					"pathName": "info-pages/pages/index6/index",
+					"id": 3,
+					"name": "info-pages/pages/success/success",
+					"pathName": "info-pages/pages/success/success",
 					"query": "",
 					"scene": null
 				},
@@ -81,6 +81,7 @@
 					"id": -1,
 					"name": "info-pages/pages/running/running",
 					"pathName": "info-pages/pages/running/running",
+					"query": "",
 					"scene": null
 				}
 			]

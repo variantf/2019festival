@@ -1,2 +1,3 @@
 pages/**/*.js
 info-pages/**/*.js
+node_modules/
