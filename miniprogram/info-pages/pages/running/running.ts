@@ -1,11 +1,14 @@
-var app = getApp<IAppOption>()
+var app = getApp<IAppOption>();
 
 Page({
+  onShow() {
+    app.sound("start");
+  },
   data: {
     sid: '',
     pid: '',
     questionNumber:0,
-    questionContent:"截止到2018年末，我国农村贫困人口减少到1660万人。2019年12月19日，全国扶贫开发工作会议总结2019年脱贫攻坚工作，预计2019年减少贫困人口1000万人以上。",
+    questionContent:"",
     choiceA:"",
     choiceB:"",
     lastChoice: '',
@@ -33,12 +36,13 @@ Page({
         success: app.handleRequstFinish(function (res: any) {
             const session = res.data;
             if (session.status == 'done') {
+              app.sound("failed")
                 page.setData({ lastChoiceStatus: 'error' });
                 setTimeout(function () {
                     page.nextQuestionPending = false;
                     if (session.correct_count >= page.data.LOTTERY_CORRECT_COUNT) {
                       wx.redirectTo({
-                        url: `../success/success?correct_count=${session.correct_count}`,
+                        url: `../success/success?correct_count=${session.correct_count}&session_id=${session.id}`,
                       });
                     } else {
                       wx.redirectTo({
@@ -48,6 +52,7 @@ Page({
                 }, 500);
             }
             else {
+              app.sound("correct")
                 page.setData({ lastChoiceStatus: 'correct' });
                 setTimeout(function () {
                     page.nextQuestionPending = false;

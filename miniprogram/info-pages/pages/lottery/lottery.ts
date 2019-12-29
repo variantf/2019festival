@@ -1,12 +1,22 @@
 // index.ts
 // 获取应用实例
-
+var app = getApp<IAppOption>();
 Page({
   data: {
-    btnStyle: 'btn-bg-blue'
+    btnStyle: 'btn-bg-blue',
+    logo: '',
+    link: ''
   },
   hasJump: false,
+  onLoad(options: any) {
+    console.log("options", options);
+    this.setData({
+      logo: decodeURIComponent(options.logo),
+      link: decodeURIComponent(options.link)
+    })
+  },
   onShow() {
+    app.sound("lottery")
     if (this.hasJump) {
       wx.redirectTo({
         url: "/pages/index/index"
@@ -15,10 +25,21 @@ Page({
   },
   toLottery() {
     this.hasJump = true;
-    wx.navigateToMiniProgram({
-      appId: 'wx2ae8c932b8db6010',
-      path: 'pages/prodetail/prodetail?gid=307'
-    })
+    if (this.data.link.substr(0, 11) === "miniprogram") {
+      const link = this.data.link.substr(14);
+      const spliter = link.indexOf('/');
+      const appId = link.substr(0, spliter);
+      const path = link.substr(spliter + 1);
+      console.log("link: ", link, appId, path);
+      wx.navigateToMiniProgram({
+        appId,
+        path
+      })
+    } else {
+      wx.redirectTo({
+        url: `../webview/webview?url=${encodeURIComponent(this.data.link)}`
+      })
+    }
   },
   btnToRed() {
     this.setData({

@@ -3,9 +3,15 @@
 <import src="./present_button.wxml" />
 <import src="./stars.wxml" />
 <view class="container">
-<template is="present_bg" />
-<template is="stars" />
-<!-- <template is="present_button"/> -->
+  <template is="present_bg" />
+  <template is="stars" />
 
-<view bindtap="toLottery" bindtouchstart="btnToRed" bindtouchend="btnToBlue" class="present_button btn {{btnStyle}}">收下啦</view>
+  <view class="content">
+    <view class="row"><image mode="aspectFit" class="logo" src="{{logo}}" />给您拜年啦</view>
+    <view>一份超值年货惊喜送给你</view>
+  </view>
+  <view 
+    bindtap="toLottery" 
+    bindtouchstart="btnToRed" 
+    bindtouchend="btnToBlue" class="present_button btn {{btnStyle}}">收下啦</view>
 </view>

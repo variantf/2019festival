@@ -1,0 +1,2 @@
+<!--info-pages/pages/webview/webview.wxml-->
+<web-view src="{{url}}" bindmessage="onOpenID" bindload="onWebViewLoad" binderror="onWebViewError"></web-view>

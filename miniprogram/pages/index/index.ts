@@ -41,7 +41,7 @@ Page({
     })
   },
   showSignon(info: any) {
-    console.log("showSignon")
+    app.sound("dialog")
     this.ensureLogin(info.detail.userInfo, ()=>{
       this.setData({
         showSignonDialog: true,
@@ -104,6 +104,7 @@ Page({
   },
 
   startBtnToRed() {
+    app.sound("btn");
     this.setData({
       startBtnStyle: 'btn-bg-red'
     })
@@ -114,6 +115,7 @@ Page({
     })
   },
   signonBtnToRed() {
+    app.sound("btn");
     this.setData({
       signonBtnStyle: 'btn-bg-red'
     })

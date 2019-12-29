@@ -32,35 +32,39 @@
 		"game": {
 			"list": []
 		},
+		"gamePlugin": {
+			"current": -1,
+			"list": []
+		},
 		"miniprogram": {
 			"current": 2,
 			"list": [
 				{
-					"id": 0,
-					"name": "prepare-pages/pages/rule/rule",
-					"pathName": "prepare-pages/pages/rule/rule",
+					"id": -1,
+					"name": "info-pages/pages/rule/rule",
+					"pathName": "info-pages/pages/rule/rule",
 					"query": "",
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "info-pages/pages/countdown/countdown",
-					"pathName": "info-pages/pages/countdown/countdown",
+					"id": 1,
+					"name": "prepare-pages/pages/countdown/countdown",
+					"pathName": "prepare-pages/pages/countdown/countdown",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 2,
-					"name": "info-pages/pages/lottery/lottery",
-					"pathName": "info-pages/pages/lottery/lottery",
+					"name": "info-pages/pages/index7/index",
+					"pathName": "info-pages/pages/index7/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": 3,
-					"name": "info-pages/pages/success/success",
-					"pathName": "info-pages/pages/success/success",
-					"query": "",
+					"name": "info-pages/pages/lottery/lottery",
+					"pathName": "info-pages/pages/lottery/lottery",
+					"query": "logo=https://endpoint.2019festival.variantf.zgcszkw.com/static/logo/hmyj.png",
 					"scene": null
 				},
 				{

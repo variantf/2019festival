@@ -2,18 +2,52 @@
 
 App<IAppOption>({
   API_ENDPOINT: 'https://endpoint.2019festival.variantf.zgcszkw.com/api',
+  STATIC_URL: 'https://endpoint.2019festival.variantf.zgcszkw.com/static/',
   globalData: {
     token: ''
 
   },
   onLaunch() {
-    this.innerAudioContext = wx.createInnerAudioContext();
-    this.innerAudioContext.autoplay=true; 
-    this.innerAudioContext.src ='https://endpoint.2019festival.variantf.zgcszkw.com/static/bgm.mp3';
-    this.innerAudioContext.loop = true;
-    this.innerAudioContext.play();
+    this.bgmInnerAudioContext = wx.createInnerAudioContext();
+    this.bgmInnerAudioContext.src = this.STATIC_URL + 'bgm.mp3';
+    this.bgmInnerAudioContext.loop = true;
+
+    this.btnInnerAudioContext = wx.createInnerAudioContext();
+    this.btnInnerAudioContext.src = this.STATIC_URL + 'btn.mp3';
+
+    this.correctInnerAudioContext = wx.createInnerAudioContext();
+    this.correctInnerAudioContext.src = this.STATIC_URL + 'correct.mp3';
+
+    this.failedInnerAudioContext = wx.createInnerAudioContext();
+    this.failedInnerAudioContext.src = this.STATIC_URL + 'failed.mp3';
+
+    this.dialogInnerAudioContext = wx.createInnerAudioContext();
+    this.dialogInnerAudioContext.src = this.STATIC_URL + 'dialog.mp3';
+
+    this.lotteryInnerAudioContext = wx.createInnerAudioContext();
+    this.lotteryInnerAudioContext.src = this.STATIC_URL + 'lottery.mp3';
+
+    this.ruleInnerAudioContext = wx.createInnerAudioContext();
+    this.ruleInnerAudioContext.src = this.STATIC_URL + 'rule.mp3';
+
+    this.startInnerAudioContext = wx.createInnerAudioContext();
+    this.startInnerAudioContext.src = this.STATIC_URL + 'start.mp3';
   },
-  innerAudioContext: null,
+  sound(name: string) {
+    const x: any = this;
+    const ctx: any =x[`${name}InnerAudioContext`];
+    if (ctx !== null) {
+      ctx.play();
+    }
+  },
+  bgmInnerAudioContext: null,
+  btnInnerAudioContext: null,
+  correctInnerAudioContext: null,
+  failedInnerAudioContext: null,
+  dialogInnerAudioContext: null,
+  startInnerAudioContext: null,
+  ruleInnerAudioContext: null,
+  lotteryInnerAudioContext: null,
   handleRequstFinish(callback: (res: WechatMiniprogram.RequestSuccessCallbackResult) => void) {
     return (res: WechatMiniprogram.RequestSuccessCallbackResult) => {
       if (res.statusCode != 200) {

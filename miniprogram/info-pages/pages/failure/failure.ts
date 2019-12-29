@@ -1,5 +1,6 @@
 // index.ts
 // 获取应用实例
+var app = getApp<IAppOption>();
 
 Page({
   data: {
@@ -11,6 +12,7 @@ Page({
     })
   },
   btnToRed() {
+    app.sound("btn")
     this.setData({
       btnStyle: 'btn-bg-red'
     })

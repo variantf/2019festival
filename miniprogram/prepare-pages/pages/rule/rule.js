@@ -1,3 +1,5 @@
+var app = getApp()
+
 Page({
   data: {
     btnStyle: 'btn-bg-blue'
@@ -8,6 +10,7 @@ Page({
     })
   },
   btnToRed() {
+    app.sound("btn")
     this.setData({
       btnStyle: 'btn-bg-red'
     })
@@ -17,4 +20,7 @@ Page({
       btnStyle: 'btn-bg-blue'
     })
   },
+  onShow() {
+    app.sound("rule")
+  }
 })
