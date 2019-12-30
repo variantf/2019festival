@@ -15,7 +15,6 @@
         "pages/failure/failure",
         "pages/success/success",
         "pages/lottery/lottery",
-        "pages/running/running",
         "pages/webview/webview"
       ]
     },
@@ -24,6 +23,12 @@
       "pages": [
         "pages/rule/rule",
         "pages/countdown/countdown"
+      ]
+    },
+    {
+      "root": "running",
+      "pages": [
+        "pages/running/running"
       ]
     }
   ],

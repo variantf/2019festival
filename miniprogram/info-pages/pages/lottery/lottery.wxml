@@ -2,8 +2,11 @@
 <import src="./present_bg.wxml" />
 <import src="./present_button.wxml" />
 <import src="./stars.wxml" />
+<import src="/pages/templates/templates.wxml" />
 <view class="container">
   <template is="present_bg" />
+  <template is="tvstation" />
+  <template is="trumpet" data="{{bgmPlaying}}"/>
   <template is="stars" />
 
   <view class="content">

@@ -7,6 +7,7 @@
   <template is="rotation" />
   <template is="overlay" />
   <template is="tvstation" />
+  <template is="trumpet" data="{{bgmPlaying}}"/>
 
   <!-- <template is="circle" /> -->
   <template wx:if="{{remainSeconds == 3}}" is="three" />

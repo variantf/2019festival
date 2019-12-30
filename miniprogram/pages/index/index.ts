@@ -8,7 +8,8 @@ Page({
     successiveSignonCount: 0,
     startBtnStyle: 'btn-bg-blue',
     signonDialogBgStyle: '',
-    signonBtnStyle: 'btn-bg-blue'
+    signonBtnStyle: 'btn-bg-blue',
+    bgmPlaying: true
   },
   closeSignonDialog() {
     this.setData({ 
@@ -124,5 +125,16 @@ Page({
     this.setData({
       signonBtnStyle: 'btn-bg-blue'
     })
+  },
+  onShow() {
+    this.setData({
+      bgmPlaying: !app.bgmPaused()
+    });
+  },
+  toggleBGM() {
+    this.setData({
+      bgmPlaying: !this.data.bgmPlaying
+    });
+    app.toggleBGM();
   }
 })

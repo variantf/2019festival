@@ -55,8 +55,8 @@
 				},
 				{
 					"id": 2,
-					"name": "info-pages/pages/index7/index",
-					"pathName": "info-pages/pages/index7/index",
+					"name": "info-pages/pages/success/success",
+					"pathName": "info-pages/pages/success/success",
 					"query": "",
 					"scene": null
 				},
@@ -82,9 +82,9 @@
 					"scene": null
 				},
 				{
-					"id": -1,
-					"name": "info-pages/pages/running/running",
-					"pathName": "info-pages/pages/running/running",
+					"id": 6,
+					"name": "running/pages/running/running",
+					"pathName": "running/pages/running/running",
 					"query": "",
 					"scene": null
 				}

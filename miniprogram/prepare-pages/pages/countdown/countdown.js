@@ -34,13 +34,17 @@ Page({
     }, 1000);
   },
 
-  /**
-   * Lifecycle function--Called when page show
-   */
-  onShow: function () {
-
+  onShow() {
+    this.setData({
+      bgmPlaying: !app.bgmPaused()
+    });
   },
-
+  toggleBGM() {
+    this.setData({
+      bgmPlaying: !this.data.bgmPlaying
+    });
+    app.toggleBGM();
+  },
   /**
    * Lifecycle function--Called when page hide
    */

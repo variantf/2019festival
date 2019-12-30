@@ -1,0 +1,3 @@
+<template name="answer_fig">
+<image class="answer_fig" mode="widthFix" src="{{HOST_SRC}}"></image>
+</template>

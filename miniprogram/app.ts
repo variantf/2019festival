@@ -11,6 +11,7 @@ App<IAppOption>({
     this.bgmInnerAudioContext = wx.createInnerAudioContext();
     this.bgmInnerAudioContext.src = this.STATIC_URL + 'bgm.mp3';
     this.bgmInnerAudioContext.loop = true;
+    this.bgmInnerAudioContext.autoplay = true;
 
     this.btnInnerAudioContext = wx.createInnerAudioContext();
     this.btnInnerAudioContext.src = this.STATIC_URL + 'btn.mp3';
@@ -32,6 +33,24 @@ App<IAppOption>({
 
     this.startInnerAudioContext = wx.createInnerAudioContext();
     this.startInnerAudioContext.src = this.STATIC_URL + 'start.mp3';
+  },
+  toggleBGM() {
+    const {bgmInnerAudioContext} = this;
+    if (bgmInnerAudioContext === null) {
+      return
+    }
+    if (bgmInnerAudioContext.paused) {
+      bgmInnerAudioContext.play();
+    } else {
+      bgmInnerAudioContext.pause();
+    }
+  },
+  bgmPaused() {
+    const { bgmInnerAudioContext } = this;
+    if (bgmInnerAudioContext === null) {
+      return true;
+    }
+    return bgmInnerAudioContext.paused;
   },
   sound(name: string) {
     const x: any = this;

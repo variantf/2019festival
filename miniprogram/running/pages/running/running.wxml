@@ -13,5 +13,5 @@
   </view>
 </view>
 <template is="answer_bg" />
-<template is="answer_fig"/>
+<template is="answer_fig" data="{{HOST_SRC}}"/>
 </view>

@@ -16,5 +16,7 @@ interface IAppOption {
   lotteryInnerAudioContext: WechatMiniprogram.InnerAudioContext | null,
   sound: (name:string) => void,
   handleRequstFinish: (callback: (res: WechatMiniprogram.RequestSuccessCallbackResult) => void) => WechatMiniprogram.RequestSuccessCallback,
-  handleRequestFail: (res: WechatMiniprogram.GeneralCallbackResult) => void
+  handleRequestFail: (res: WechatMiniprogram.GeneralCallbackResult) => void,
+  toggleBGM: () => void,
+  bgmPaused: () => boolean
 }

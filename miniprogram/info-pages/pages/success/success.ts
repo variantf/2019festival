@@ -6,7 +6,8 @@ Page({
   data: {
     correctNum: 0,
     btnStyle: 'btn-bg-blue',
-    sessionId: ''
+    sessionId: '',
+    bgmPlaying: true
   },
   toLottery() {
     wx.request({
@@ -39,4 +40,15 @@ Page({
       btnStyle: 'btn-bg-blue'
     })
   },
+  onShow() {
+    this.setData({
+      bgmPlaying: !app.bgmPaused()
+    });
+  },
+  toggleBGM() {
+    this.setData({
+      bgmPlaying: !this.data.bgmPlaying
+    });
+    app.toggleBGM();
+  }
 })

@@ -4,7 +4,8 @@ var app = getApp<IAppOption>();
 
 Page({
   data: {
-    btnStyle: 'btn-bg-blue'
+    btnStyle: 'btn-bg-blue',
+    bgmPlaying: true
   },
   back() {
     wx.redirectTo({
@@ -22,4 +23,15 @@ Page({
       btnStyle: 'btn-bg-blue'
     })
   },
+  onShow() {
+    this.setData({
+      bgmPlaying: !app.bgmPaused()
+    });
+  },
+  toggleBGM() {
+    this.setData({
+      bgmPlaying: !this.data.bgmPlaying
+    });
+    app.toggleBGM();
+  }
 })

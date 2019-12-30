@@ -5,7 +5,8 @@ Page({
   data: {
     btnStyle: 'btn-bg-blue',
     logo: '',
-    link: ''
+    link: '',
+    bgmPlaying: true
   },
   hasJump: false,
   onLoad(options: any) {
@@ -22,6 +23,15 @@ Page({
         url: "/pages/index/index"
       })
     }
+    this.setData({
+      bgmPlaying: !app.bgmPaused()
+    });
+  },
+  toggleBGM() {
+    this.setData({
+      bgmPlaying: !this.data.bgmPlaying
+    });
+    app.toggleBGM();
   },
   toLottery() {
     this.hasJump = true;

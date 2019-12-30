@@ -2,7 +2,8 @@ var app = getApp()
 
 Page({
   data: {
-    btnStyle: 'btn-bg-blue'
+    btnStyle: 'btn-bg-blue',
+    bgmPlaying: true
   },
   next() {
     wx.redirectTo({
@@ -21,6 +22,15 @@ Page({
     })
   },
   onShow() {
-    app.sound("rule")
+    app.sound("rule");
+    this.setData({
+      bgmPlaying: !app.bgmPaused()
+    });
+  },
+  toggleBGM() {
+    this.setData({
+      bgmPlaying: !this.data.bgmPlaying
+    });
+    app.toggleBGM();
   }
 })

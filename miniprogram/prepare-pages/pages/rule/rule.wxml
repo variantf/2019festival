@@ -4,6 +4,7 @@
 <view class="container">
   <template is="bg-img" />
   <template is="tvstation" />
+  <template is="trumpet" data="{{bgmPlaying}}"/>
   <view class="rule-container">
     <view class="rule-item">
       <view>1、</view>

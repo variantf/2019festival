@@ -1,6 +1,10 @@
 <!--index.wxml-->
 <import src="./failure_bg.wxml" />
 <import src="./failure_button.wxml" />
+<import src="../../../pages/templates/templates.wxml" />
+
+<template is="tvstation" />
+<template is="trumpet" data="{{bgmPlaying}}"/>
 <view class="container">
 <template is="failure_bg" />
 <view bindtap="back" bindtouchstart="btnToRed" bindtouchend="btnToBlue" class="failure-button btn {{btnStyle}}">再试一次</view>

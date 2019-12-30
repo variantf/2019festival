@@ -1,5 +1,19 @@
 var app = getApp<IAppOption>();
 
+import { HOST_1 } from "./host1";
+import { HOST_2 } from "./host2";
+import { HOST_3 } from "./host3";
+import { HOST_4 } from "./host4";
+import { HOST_5 } from "./host5";
+import { HOST_6 } from "./host6";
+import { HOST_7 } from "./host7";
+import { HOST_8 } from "./host8";
+
+const HOSTS: Array<string> = [
+  HOST_1, HOST_2, HOST_3, HOST_4,
+  HOST_5, HOST_6, HOST_7, HOST_8
+]
+
 Page({
   onShow() {
     app.sound("start");
@@ -13,7 +27,8 @@ Page({
     choiceB:"",
     lastChoice: '',
     lastChoiceStatus: 'unknown',
-    LOTTERY_CORRECT_COUNT: 3
+    LOTTERY_CORRECT_COUNT: 3,
+    HOST_SRC: ''
   },
   nextQuestionPending: false,
   nextQuestion: function (evt: any) {
@@ -75,6 +90,9 @@ Page({
   },
 
   onLoad() {
+    this.setData({
+      HOST_SRC: "data:image/png;base64,"+ HOSTS[Math.floor(Math.random() * 8)]
+    });
     const self = this;
     wx.request({
       url: app.API_ENDPOINT + "/session",
