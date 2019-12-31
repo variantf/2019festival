@@ -1,6 +1,7 @@
 <!--miniprogram/pages/index6/index.wxml-->
 <import src="./answer_bg.wxml" />
 <import src="./answer_fig.wxml" />
+<import src="/pages/templates/templates.wxml" />
 <view class="container">
 <!-- <view class="number_line"> -->
   <view class="number">第  {{questionNumber}}  题</view>
@@ -14,4 +15,6 @@
 </view>
 <template is="answer_bg" />
 <template is="answer_fig" data="{{HOST_SRC}}"/>
+<template is="tvstation" />
+<template is="trumpet" data="{{bgmPlaying}}"/>
 </view>

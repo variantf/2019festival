@@ -17,6 +17,15 @@ const HOSTS: Array<string> = [
 Page({
   onShow() {
     app.sound("start");
+    this.setData({
+      bgmPlaying: !app.bgmPaused()
+    });
+  },
+  toggleBGM() {
+    this.setData({
+      bgmPlaying: !this.data.bgmPlaying
+    });
+    app.toggleBGM();
   },
   data: {
     sid: '',
@@ -28,7 +37,8 @@ Page({
     lastChoice: '',
     lastChoiceStatus: 'unknown',
     LOTTERY_CORRECT_COUNT: 3,
-    HOST_SRC: ''
+    HOST_SRC: '',
+    bgmPlaying: true
   },
   nextQuestionPending: false,
   nextQuestion: function (evt: any) {
@@ -57,11 +67,11 @@ Page({
                     page.nextQuestionPending = false;
                     if (session.correct_count >= page.data.LOTTERY_CORRECT_COUNT) {
                       wx.redirectTo({
-                        url: `../success/success?correct_count=${session.correct_count}&session_id=${session.id}`,
+                        url: `/info-pages/pages/success/success?correct_count=${session.correct_count}&session_id=${session.id}`,
                       });
                     } else {
                       wx.redirectTo({
-                        url: '../failure/failure'
+                        url: '/info-pages/pages/failure/failure'
                       });
                     }
                 }, 500);

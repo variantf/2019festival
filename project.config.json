@@ -87,6 +87,13 @@
 					"pathName": "running/pages/running/running",
 					"query": "",
 					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "info-pages/pages/failure/failure",
+					"pathName": "info-pages/pages/failure/failure",
+					"query": "",
+					"scene": null
 				}
 			]
 		}

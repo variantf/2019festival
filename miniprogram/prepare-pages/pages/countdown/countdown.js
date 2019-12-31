@@ -1,3 +1,4 @@
+var app = getApp()
 // info-pages/pages/countdown/countdown.js
 Page({
 
@@ -24,8 +25,9 @@ Page({
       console.log(self.data.remainSeconds);
       if (self.data.remainSeconds == 0) {
         wx.redirectTo({
-          url: '/info-pages/pages/running/running',
+          url: '/running/pages/running/running',
         })
+        clearInterval(self.timer);
       } else {
         self.setData({
           remainSeconds: self.data.remainSeconds - 1

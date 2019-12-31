@@ -8,11 +8,11 @@
   <view class="rule-container">
     <view class="rule-item">
       <view>1、</view>
-      <view>参与趣味知识问答，答对三题即可获取抽奖机会。</view>
+      <view>参与趣味知识问答，答对3题即可抽取好礼。</view>
     </view>
     <view class="rule-item">
       <view>2、</view>
-      <view>每人每天都有三次答题机会。机会用完，可通过分享获取额外答题机会。</view>
+      <view>每人每天答题次数不限。</view>
     </view>
     <view class="rule-item">
       <view>3、</view>

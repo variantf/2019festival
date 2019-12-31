@@ -18,5 +18,6 @@ interface IAppOption {
   handleRequstFinish: (callback: (res: WechatMiniprogram.RequestSuccessCallbackResult) => void) => WechatMiniprogram.RequestSuccessCallback,
   handleRequestFail: (res: WechatMiniprogram.GeneralCallbackResult) => void,
   toggleBGM: () => void,
-  bgmPaused: () => boolean
+  bgmPaused: () => boolean,
+  _bgmPaused: boolean
 }

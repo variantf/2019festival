@@ -52,6 +52,7 @@ Page({
     }
   },
   btnToRed() {
+    app.sound("btn");
     this.setData({
       btnStyle: 'btn-bg-red'
     })

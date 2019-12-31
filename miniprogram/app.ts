@@ -12,6 +12,14 @@ App<IAppOption>({
     this.bgmInnerAudioContext.src = this.STATIC_URL + 'bgm.mp3';
     this.bgmInnerAudioContext.loop = true;
     this.bgmInnerAudioContext.autoplay = true;
+    this._bgmPaused = false;
+    const self = this;
+    this.bgmInnerAudioContext.onPlay = function() {
+      self._bgmPaused = false;
+    }
+    this.bgmInnerAudioContext.onPause = function() {
+      self._bgmPaused = true;
+    }
 
     this.btnInnerAudioContext = wx.createInnerAudioContext();
     this.btnInnerAudioContext.src = this.STATIC_URL + 'btn.mp3';
@@ -34,23 +42,32 @@ App<IAppOption>({
     this.startInnerAudioContext = wx.createInnerAudioContext();
     this.startInnerAudioContext.src = this.STATIC_URL + 'start.mp3';
   },
+  onShow () {
+    const { bgmInnerAudioContext } = this;
+    if (bgmInnerAudioContext === null) {
+      return
+    }
+    if (this._bgmPaused) {
+      bgmInnerAudioContext.pause();
+    } else {
+      bgmInnerAudioContext.play();
+    }
+  },
   toggleBGM() {
     const {bgmInnerAudioContext} = this;
     if (bgmInnerAudioContext === null) {
       return
     }
-    if (bgmInnerAudioContext.paused) {
+    if (this._bgmPaused) {
       bgmInnerAudioContext.play();
+      this._bgmPaused = false;
     } else {
       bgmInnerAudioContext.pause();
+      this._bgmPaused = true;
     }
   },
   bgmPaused() {
-    const { bgmInnerAudioContext } = this;
-    if (bgmInnerAudioContext === null) {
-      return true;
-    }
-    return bgmInnerAudioContext.paused;
+    return this._bgmPaused;
   },
   sound(name: string) {
     const x: any = this;
@@ -59,6 +76,7 @@ App<IAppOption>({
       ctx.play();
     }
   },
+  _bgmPaused: false,
   bgmInnerAudioContext: null,
   btnInnerAudioContext: null,
   correctInnerAudioContext: null,
