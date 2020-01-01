@@ -8,5 +8,4 @@
   <button open-type="getUserInfo" bindgetuserinfo="start" bindtouchstart="startBtnToRed" bindtouchend="startBtnToBlue" class="start-btn btn {{startBtnStyle}}" style="">点击参与</button>
   <template is="trumpet" data="{{bgmPlaying}}"/>
   <template is="signon-btn" data="{{showSignonDialog, successiveSignonCount, signonDialogBgStyle, signonBtnStyle}}"/>
-  <view class="sigon-text">去签到</view>
 </view>

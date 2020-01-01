@@ -32,5 +32,6 @@ Page({
       bgmPlaying: !this.data.bgmPlaying
     });
     app.toggleBGM();
-  }
+  },
+  onShareAppMessage: app.onShare,
 })

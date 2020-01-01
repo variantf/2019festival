@@ -78,7 +78,5 @@ Page({
   /**
    * Called when user click on the top right corner to share
    */
-  onShareAppMessage: function () {
-
-  }
+  onShareAppMessage: app.onShare,
 })

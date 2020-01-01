@@ -19,5 +19,6 @@ interface IAppOption {
   handleRequestFail: (res: WechatMiniprogram.GeneralCallbackResult) => void,
   toggleBGM: () => void,
   bgmPaused: () => boolean,
-  _bgmPaused: boolean
+  _bgmPaused: boolean,
+  onShare: () => { title: string, imageUrl: string}
 }

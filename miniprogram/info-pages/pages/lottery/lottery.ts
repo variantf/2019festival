@@ -61,5 +61,6 @@ Page({
     this.setData({
       btnStyle: 'btn-bg-blue'
     })
-  }
+  },
+  onShareAppMessage: app.onShare
 })

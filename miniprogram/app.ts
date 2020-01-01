@@ -107,4 +107,20 @@ App<IAppOption>({
       }
     });
   },
+  onShare: function(){
+    if (this.globalData.token) {
+      wx.request({
+        url: this.API_ENDPOINT + "/shared",
+        method: "POST",
+        header: {
+          'X-User-Token': this.globalData.token
+        }
+      })
+    }
+
+    return {
+      title: '红包年货拿到嗨，一起欢喜过大年',
+      imageUrl: 'https://endpoint.2019festival.variantf.zgcszkw.com/static/share.jpg'
+    }
+  }
 })

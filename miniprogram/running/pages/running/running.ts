@@ -123,5 +123,6 @@ Page({
       }),
       fail: app.handleRequestFail
     })
-  }
+  },
+  onShareAppMessage: function() { return app.onShare(); }
 })

@@ -13,9 +13,9 @@
 .rule-container {
   width: 350rpx;
   position: absolute;
-  top: 30%;
+  top: 32%;
   font-family: 'default';
-  font-size: 40rpx;
+  font-size: 45rpx;
   color: white;
   display: flex;
   flex-direction: column;
@@ -23,7 +23,7 @@
 }
 
 .rule-item {
-  margin-bottom: 50rpx;
+  margin-bottom: 20rpx;
   display: flex;
   flex-direction: row;
 }
