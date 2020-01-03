@@ -20,7 +20,14 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  background-color: #00000000;
+  background-color: transparent;
+  border: none;
+  border-color: transparent;
+}
+
+.btn button::after {
+  border: none;
+  border-color: transparent;
 }
 
 .btn-bg-red {

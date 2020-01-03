@@ -8,10 +8,12 @@ import { HOST_5 } from "./host5";
 import { HOST_6 } from "./host6";
 import { HOST_7 } from "./host7";
 import { HOST_8 } from "./host8";
+import { HOST_9 } from "./host9";
 
 const HOSTS: Array<string> = [
   HOST_1, HOST_2, HOST_3, HOST_4,
-  HOST_5, HOST_6, HOST_7, HOST_8
+  HOST_5, HOST_6, HOST_7, HOST_8,
+  HOST_9
 ]
 
 Page({
@@ -101,7 +103,7 @@ Page({
 
   onLoad() {
     this.setData({
-      HOST_SRC: "data:image/png;base64,"+ HOSTS[Math.floor(Math.random() * 8)]
+      HOST_SRC: "data:image/png;base64,"+ HOSTS[Math.floor(Math.random() * 9)]
     });
     const self = this;
     wx.request({

@@ -35,12 +35,8 @@
   position: absolute;
   right: -10rpx;
   bottom: 3%;
-  background-color: #00000000;
+  background-color: transparent;
   padding: 0;
-  /* animation-name: swing;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  transform-origin: top; */
 }
 
 .start-signon-btn {
